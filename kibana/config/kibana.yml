@@ -11,4 +11,4 @@ monitoring.ui.container.elasticsearch.enabled: true
 #
 elasticsearch.username: kibana_system
 elasticsearch.password: ${KIBANA_SYSTEM_PASSWORD}
-xpack.security.encryptionKey: ${KIBANA_SYSTEM_ENCRYPTIONKEY}
+# xpack.security.encryptionKey: ${KIBANA_SYSTEM_ENCRYPTIONKEY}
