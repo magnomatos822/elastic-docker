@@ -171,8 +171,6 @@ reset the passwords of all aforementioned Elasticsearch users to random secrets.
     ```console
     $ docker-compose exec elasticsearch bin/elasticsearch-reset-password --batch --user elastic
     ```
-    
-    =IXyd56RqAgm-ZHVBiJm
 
     ```console
     $ docker-compose exec elasticsearch bin/elasticsearch-reset-password --batch --user logstash_internal
@@ -186,7 +184,7 @@ reset the passwords of all aforementioned Elasticsearch users to random secrets.
     other components), feel free to repeat this operation at any time for the rest of the [built-in
     users][builtin-users].
 
-1. Replace usernames and passwords in configuration files
+2. Replace usernames and passwords in configuration files
 
     Replace the password of the `elastic` user inside the `.env` file with the password generated in the previous step.
     Its value isn't used by any core component, but [extensions](#how-to-enable-the-provided-extensions) use it to
@@ -205,7 +203,7 @@ reset the passwords of all aforementioned Elasticsearch users to random secrets.
 
     See the [Configuration](#configuration) section below for more information about these configuration files.
 
-1. Restart Logstash and Kibana to re-connect to Elasticsearch using the new passwords
+3. Restart Logstash and Kibana to re-connect to Elasticsearch using the new passwords
 
     ```console
     $ docker-compose up -d logstash kibana
