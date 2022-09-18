@@ -41,8 +41,6 @@ services:
       ELASTIC_PASSWORD: ${ELASTIC_PASSWORD:-}
     networks:
       - elk
-    depends_on:
-      - elasticsearch
 networks:
   elk:
     name: elk
