@@ -41,5 +41,6 @@ services:
       ELASTIC_PASSWORD: uy2lLkWJSsKJOWwZkNSd
     networks:
       - elk
-    depends_on:
-      - elasticsearch
+networks:
+  elk:
+    driver: bridge
