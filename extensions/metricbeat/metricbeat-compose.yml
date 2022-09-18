@@ -4,6 +4,8 @@ services:
   metricbeat:
     build:
       context: extensions/metricbeat/
+      env_file:
+            - ../.env
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     # Run as 'root' instead of 'metricbeat' (uid 1000) to allow reading
