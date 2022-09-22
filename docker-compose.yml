@@ -16,8 +16,8 @@ services:
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
-      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch/config/:/usr/share/elasticsearch/config/
-      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch:/usr/share/elasticsearch/data
+      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch/config/:/usr/share/elasticsearch/config/:ro
+      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch:/usr/share/elasticsearch/data:rw
     ports:
       - "9200:9200"
       - "9300:9300"
