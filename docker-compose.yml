@@ -16,8 +16,8 @@ services:
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
     volumes:
-      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch/config/:/usr/share/elasticsearch/config/:ro,z
-      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch:/usr/share/elasticsearch/data:z
+      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch/config/:/usr/share/elasticsearch/config/
+      - /mnt/STORAGE/VOLUMES/elastic/elasticsearch:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -30,6 +30,7 @@ services:
       # Use single node discovery in order to disable production mode and avoid bootstrap checks.
       # see: https://www.elastic.co/guide/en/elasticsearch/reference/current/bootstrap-checks.html
       discovery.type: single-node
+
     networks:
       - elk
 
