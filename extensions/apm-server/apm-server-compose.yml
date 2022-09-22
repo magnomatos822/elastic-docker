@@ -11,7 +11,7 @@ services:
         # https://www.elastic.co/guide/en/beats/libbeat/current/config-file-permissions.html
       - --strict.perms=false
     volumes:
-      - ./extensions/apm-server/config/apm-server.yml:/usr/share/apm-server/apm-server.yml:ro,Z
+      - /mnt/STORAGE/VOLUMES/elastic/extensions/apm-server/config/apm-server.yml:/usr/share/apm-server/apm-server.yml:ro,Z
     ports:
       - '8200:8200'
     environment:
