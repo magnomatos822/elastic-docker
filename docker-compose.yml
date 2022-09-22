@@ -15,6 +15,8 @@ services:
       context: elasticsearch/
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
+    env_file: 
+      - .env
     volumes:
       - /mnt/STORAGE/VOLUMES/elastic/elasticsearch/config/:/usr/share/elasticsearch/config/:ro
       - /mnt/STORAGE/VOLUMES/elastic/elasticsearch:/usr/share/elasticsearch/data:rw
@@ -39,6 +41,8 @@ services:
       context: logstash/
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
+    env_file:
+      - .env
     volumes:
       - /mnt/STORAGE/VOLUMES/elastic/logstash/config/:/usr/share/logstash/config/:ro,Z
       - /mnt/STORAGE/VOLUMES/elastic/logstash/pipeline:/usr/share/logstash/pipeline:ro,Z
@@ -60,6 +64,8 @@ services:
       context: kibana/
       args:
         ELASTIC_VERSION: ${ELASTIC_VERSION}
+    env_file:
+      - .env
     volumes:
       - /mnt/STORAGE/VOLUMES/elastic/kibana/config/:/usr/share/kibana/config/:ro,Z
     ports:
