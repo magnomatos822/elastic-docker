@@ -11,8 +11,7 @@ http.port: 9600
 xpack.monitoring.enabled: true
 xpack.monitoring.elasticsearch.url: "http://elasticsearch:9200"
 xpack.monitoring.elasticsearch.username: "elastic"
-# xpack.monitoring.elasticsearch.password: "${ELASTIC_PASSWORD}"
-xpack.monitoring.elasticsearch.password: "changeme"
+xpack.monitoring.elasticsearch.password: "${ELASTIC_PASSWORD}"
 
 ## Logstash Pipeline Configuration
 ## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
