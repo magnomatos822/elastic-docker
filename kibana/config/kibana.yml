@@ -1,6 +1,6 @@
 ---
 ## Default Kibana configuration from Kibana base image.
-## https://github.com/elastic/kibana/blob/master/src/dev/build/tasks/os_packages/docker_generator/templates/kibana_yml.template.ts
+## https://github.com/elastic/kibana/blob/main/src/dev/build/tasks/os_packages/docker_generator/templates/kibana_yml.template.ts
 #
 server.name: kibana
 server.host: 0.0.0.0
@@ -11,5 +11,3 @@ monitoring.ui.container.elasticsearch.enabled: true
 #
 elasticsearch.username: kibana_system
 elasticsearch.password: ${KIBANA_SYSTEM_PASSWORD}
-# xpack.security.encryptionKey: ${KIBANA_SYSTEM_ENCRYPTIONKEY}
-server.ssl.enabled: false

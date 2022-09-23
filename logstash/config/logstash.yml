@@ -1,41 +1,5 @@
 ---
 ## Default Logstash configuration from Logstash base image.
-## https://github.com/elastic/logstash/blob/master/docker/data/logstash/config/logstash-full.yml
+## https://github.com/elastic/logstash/blob/main/docker/data/logstash/config/logstash-full.yml
 #
 http.host: "0.0.0.0"
-http.port: 9600
-
-## X-Pack settings
-## see https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html
-#
-xpack.monitoring.enabled: true
-xpack.monitoring.elasticsearch.url: "http://elasticsearch:9200"
-xpack.management.elasticsearch.username: elastic
-xpack.management.elasticsearch.password: changeme
-xpack.monitoring.elasticsearch.username: elastic
-xpack.monitoring.elasticsearch.password: ${ELASTIC_PASSWORD}
-
-
-## Logstash Pipeline Configuration
-## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
-#
-path.config: "/usr/share/logstash/pipeline"
-
-## Logstash Pipeline Configuration
-## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
-#
-path.data: "/usr/share/logstash/data"
-
-## Logstash Pipeline Configuration
-## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
-#
-path.logs: "/usr/share/logstash/logs"
-
-## Logstash Pipeline Configuration
-## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
-#
-path.plugins: "/usr/share/logstash/plugins"
-
-## Logstash Pipeline Configuration
-## https://www.elastic.co/guide/en/logstash/current/config-setting-files.html
-#
