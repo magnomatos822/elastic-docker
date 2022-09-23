@@ -87,8 +87,9 @@ services:
       - elasticsearch
 
 networks:
-  elk:
-    driver: bridge
+  external:
+    name: elk
+    
 
 volumes:
   setup:
