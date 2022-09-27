@@ -5,7 +5,7 @@ services:
     build:
       context: extensions/metricbeat/
       args:
-        ELASTIC_VERSION: 8.4.2
+        ELASTIC_VERSION: 8.4.1
     # Run as 'root' instead of 'metricbeat' (uid 1000) to allow reading
     # 'docker.sock' and the host's filesystem.
     user: root
